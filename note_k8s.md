@@ -39,17 +39,27 @@
 3. wordpress-k8s.yml 리소스 제거
    - $ kubectl delete -f wordpress-k8s.yml
 
-<!-- -->
+wordpress 파일을 매니패스트 파일이라고 한다.
+매니패스트 파일이란
+Deployment / Service / pod 등을 관리해주는 파일이고
+해당 파일에선 nginx pod 2개 / apache 1개 / tomcat 1개 구성했다.
 
-1. 대시보드
+nginx 파드는 둘 다 같은 서버 포트이다.
+즉 서버는 동일한데, 파드가 다르다
+이중화 가능하며 트래픽에 따라 적절히 로드밸런싱 처리를 해준다.
+kubectl logs -f <파드명> 으로 확인 가능
 
-- $minikube dashboard
+<!-- - $ minikube tunnel -->
 
 <!--
    # 참고 사이트
    [공식 사이트] https://subicura.com/k8s/
    [집중 블로그] https://velog.io/@pinion7/macOs-m1-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-kubernetes-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0
  -->
+
+# 대시보드
+
+minikube dashboard
 
 # minikube 상태확인
 
