@@ -81,6 +81,7 @@ spec:
       nodePort: 30082 # NodePort로 외부에 노출될 포트
   selector:
     app: apache
+
 # Nginx Deployment
 ---
 apiVersion: apps/v1
